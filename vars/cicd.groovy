@@ -1,3 +1,4 @@
-def newGit(repo){
-    git "url:https://github.com/karpanitava/${repo}.git"
+def newGit(repo) {
+    git "https://github.com/karpanitava/${repo}.git"
 }
+
