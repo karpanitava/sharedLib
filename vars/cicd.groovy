@@ -22,6 +22,9 @@ def deploy(jobname, ip, context) {
     bat """
         curl -u hariadmin:hariadmin -T "${warPath}" "${deployUrl}"
     """
+     bat """
+        curl -u prasadadmin:prasadadmin -T "${warPath}" "${deployUrl}"
+    """
 }
 def functiontest(job) {
     bat 'cmd java -jar C:/ProgramData/Jenkins/.jenkins/workspace/${job}/test.jar'
