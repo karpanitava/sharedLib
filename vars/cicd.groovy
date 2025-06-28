@@ -26,6 +26,9 @@ def deploy(jobname, ip, context) {
 def functiontest(job) {
     bat 'cmd java -jar C:/ProgramData/Jenkins/.jenkins/workspace/${job}/test.jar'
 }
+def delivery() {
+      input message: 'Approve deployment to Production?', ok: 'Deploy to Production', submitter: 'Adarsh'
+}
     
     
 
