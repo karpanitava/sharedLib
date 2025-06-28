@@ -16,5 +16,5 @@ def build() {
 }
 
 def deploy(jobname, ip, context) {
-    bat '''curl -u hariadmin:hariadmin -T "C:/ProgramData/Jenkins/.jenkins/workspace/${jobname}/target/mywebapp.war" "${ip}/manager/text/deploy?path=/${context}&update=true"'''
+    bat '''curl -u hariadmin:hariadmin -T "C:/ProgramData/Jenkins/.jenkins/workspace/${jobname}/target/mywebapp.war" "%ip%/manager/text/deploy?path=/%{context%^&update=true"'''
 }
