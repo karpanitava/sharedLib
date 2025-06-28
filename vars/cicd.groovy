@@ -10,3 +10,8 @@ def newGit(String repo, String branch = 'main') {
         error "Git checkout failed: ${e.message}"
     }
 }
+
+def build() {
+    bat 'maven clean package'
+
+{
