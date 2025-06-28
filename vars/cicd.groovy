@@ -12,6 +12,6 @@ def newGit(String repo, String branch = 'main') {
 }
 
 def build() {
-    bat 'maven clean package'
+    bat 'mvn clean package'
+}
 
-{
