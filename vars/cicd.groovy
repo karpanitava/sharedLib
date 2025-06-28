@@ -25,7 +25,10 @@ def deploy(jobname, ip, context) {
 
     users.each { creds ->
         bat """
-            curl -u ${creds.username}:${creds.password} -T "${warPath}" "${deployUrl}"
+            curl -u ${creds.username}:${creds.password} ^
+                 -X POST ^
+                 --data-binary @"${warPath}" ^
+                 "${deployUrl}"
         """
     }
 }
