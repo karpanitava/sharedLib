@@ -15,3 +15,6 @@ def build() {
     bat 'mvn clean package'
 }
 
+def deploy(jobname, ip, context) {
+    bat '''curl -u hariadmin:hariadmin -T "C:/ProgramData/Jenkins/.jenkins/workspace/${jobname}/target/mywebapp.war" "${ip}/manager/text/deploy?path=/${context}&update=true"'''
+}
