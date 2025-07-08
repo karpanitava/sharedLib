@@ -19,8 +19,8 @@ def deploy(jobname, ip, context) {
     def deployUrl = "http://${ip}/manager/text/deploy?path=/${context}&update=true"
 
     def users = [
-        [username: "hariadmin", password: "hariadmin"],
-        [username: "prasadadmin", password: "prasadadmin"]
+        [username: "adminhari", password: "adminhari"],
+        [username: "adminprasad", password: "adminprasad"]
     ]
 
     users.each { creds ->
